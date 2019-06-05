@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title%} This is Quests Data Minig Process{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row mt-4">
+        <h5 class="pb-4 mb-4 border-bottom">
+                Welcome to the APTARA Data Minig Process. Enter your urls below
+            </h5>
+        <form action='/scival/crawling_process' method='post'>
+             {% csrf_token %}
+            <textarea name='text' style='margin: 0px; width: 721px; height: 93px;'></textarea>
+            <br/>
+            <br/>
+            <button type='submit' class="btn btn-success">Process Start</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
